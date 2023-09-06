@@ -1,0 +1,214 @@
+# organize configuration file
+# https://organize.readthedocs.io
+
+rules:
+  - name: books files
+    subfolders: false
+    locations: ~/Downloads
+    filters:
+      - lastmodified:
+          days: 10
+      - extension:
+          - pdf
+          - mobi
+          - djvu
+          - epub
+    actions:
+      - move: "~/Downloads/archive/books/"
+
+  - name: Archives files
+    subfolders: false
+    locations: ~/Downloads
+    filters:
+      - lastmodified:
+          days: 10
+      - extension:
+          - zip
+          - rar
+          - 7z
+          - tar
+          - gz
+          - tar.gz
+    actions:
+      - move: "~/Downloads/archive/archives/"
+
+  - name: DOCX/DOC files
+    subfolders: false
+    locations: ~/Downloads
+    filters:
+      - lastmodified:
+          days: 10
+      - extension:
+          - docx
+          - doc
+    actions:
+      - move: "~/Downloads/archive/docs/"
+
+  - name: JPEG/JPG files
+    subfolders: false
+    locations: ~/Downloads
+    filters:
+      - lastmodified:
+          days: 10
+      - extension:
+          - jpg
+          - jpeg
+          - png
+    actions:
+      - move: "~/Downloads/archive/images/"
+
+
+  - name: Tabular files
+    subfolders: false
+    locations: ~/Downloads
+    filters:
+      - lastmodified:
+          days: 10
+      - extension:
+          - xlsx
+          - xls
+          - csv
+    actions:
+      - move: "~/Downloads/archive/tabularfiles/"
+
+  - name: TXT files
+    subfolders: false
+    locations: ~/Downloads
+    filters:
+      - lastmodified:
+          days: 10
+      - extension:
+          - txt
+    actions:
+      - move: "~/Downloads/archive/txt/"
+  - name: Audio Files
+    subfolders: false
+    locations: ~/Downloads
+    filters:
+      - lastmodified:
+          days: 10
+      - extension:
+          - mp3
+          - flac
+    actions:
+      - move: "~/Downloads/archive/audio/"
+  - name: Video Files
+    subfolders: false
+    locations: ~/Downloads
+    filters:
+      - lastmodified:
+          days: 10
+      - extension:
+          - mp4
+          - mpeg
+          - avi
+    actions:
+      - move: "~/Downloads/archive/videos/"
+
+  - name: Other Image Files
+    subfolders: false
+    locations: ~/Downloads
+    filters:
+      - lastmodified:
+          days: 10
+      - extension:
+          - gif
+          - bmp
+    actions:
+      - move: "~/Downloads/archive/images/"
+  - name: Executable Files
+    subfolders: false
+    locations: ~/Downloads
+    filters:
+      - lastmodified:
+          days: 10
+      - extension:
+          - exe
+          - deb
+          - msi
+          - dmg
+    actions:
+      - move: "~/Downloads/archive/exe_msi/"
+
+
+  - name: Font Files
+    subfolders: false  
+    locations: ~/Downloads
+    filters:
+      - lastmodified:
+          days: 10    
+      - extension:
+          - ttf
+          - otf
+    actions:
+      - move: "~/Downloads/archive/fonts/"
+
+  - name: Code Files
+    subfolders: false
+    locations: ~/Downloads
+    filters:
+      - lastmodified:
+          days: 10
+      - extension:
+          - py
+          - html
+          - sh
+          - bat
+          - java
+    actions:
+      - move: "~/Downloads/archive/code/"
+  
+  - name: Temporary files
+    subfolders: false
+    locations: ~/Downloads/tmp
+    filters:
+      - lastmodified:
+          days: 10
+    actions:
+      - delete
+
+  - name: Random files
+    locations: ~/Downloads
+    subfolders: false
+    filters:
+      - lastmodified:
+          days: 10
+      - not extension: 
+        - pdf
+        - mobi
+        - epub
+        - zip
+        - rar
+        - 7z
+        - tar
+        - gz
+        - tar.gz
+        - docx
+        - djvu
+        - doc
+        - jpg
+        - jpeg
+        - png
+        - xlsx
+        - xls
+        - csv
+        - txt
+        - mp3
+        - flac
+        - mp4
+        - mpeg
+        - avi
+        - gif
+        - bmp
+        - exe
+        - deb
+        - msi
+        - ttf
+        - otf
+        - py
+        - html
+        - sh
+        - bat
+        - java
+    actions:
+      - move: "~/Downloads/archive/random/"
