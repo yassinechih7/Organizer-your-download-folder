@@ -29,6 +29,7 @@ rules:
           - tar
           - gz
           - tar.gz
+          - iso
     actions:
       - move: "~/Downloads/archive/archives/"
 
